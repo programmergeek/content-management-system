@@ -64,10 +64,10 @@ export const Login: React.FC = () => {
           )}
 
           <PrimaryButton buttonName="Login" type="submit" />
+          <a href="/signup" className="auth-page-link">
+            <SecondaryButton buttonName="Sign Up" />
+          </a>
         </form>
-        <a href="/signup" className="auth-page-link">
-          <SecondaryButton buttonName="Sign Up" />
-        </a>
       </div>
       <div className="colour-gradient"></div>
     </div>
