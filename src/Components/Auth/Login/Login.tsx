@@ -22,52 +22,8 @@ export const Login: React.FC = () => {
   return (
     <div className="form-container">
       <div className="form">
+        <p className="header">Login</p>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="names">
-            <label htmlFor="firstName">First Name</label>
-            <input
-              {...register("firstName", { required: true })}
-              type="text"
-              className="field"
-              id="first-name"
-            />
-            {errors.firstName && errors.firstName.type === "required" && (
-              <p className="error-message">You forgot this.</p>
-            )}
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              {...register("lastName", { required: true })}
-              type="text"
-              className="field"
-              id="last-name"
-            />
-            {errors.lastName && errors.lastName.type === "required" && (
-              <p className="error-message">You forgot this.</p>
-            )}
-          </div>
-
-          <label htmlFor="email">Email</label>
-          <input
-            {...register("email", {
-              required: true,
-              pattern: {
-                value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                message: "Enter a valid email address",
-              },
-            })}
-            type="text"
-            className="field"
-          />
-          {errors.email && errors.email.type === "required" && (
-            <p className="error-message"> You forgot this. </p>
-          )}
-          {errors.email && errors.email.type === "pattern" && (
-            <p className="error-message">
-              {" "}
-              You might need to double check this.{" "}
-            </p>
-          )}
-
           <label htmlFor="username">Username</label>
           <input
             {...register("username", { required: true, maxLength: 100 })}
