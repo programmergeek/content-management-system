@@ -22,8 +22,8 @@ export const Login: React.FC = () => {
   return (
     <div className="form-container">
       <div className="form-sub-container">
-        <p className="header">Login</p>
         <form onSubmit={handleSubmit(onSubmit)} className="form">
+          <p className="header">Login</p>
           <label htmlFor="username">Username</label>
           <input
             {...register("username", { required: true, maxLength: 100 })}
@@ -65,7 +65,7 @@ export const Login: React.FC = () => {
 
           <PrimaryButton buttonName="Login" type="submit" />
         </form>
-        <a href="/signup" className="">
+        <a href="/signup" className="auth-page-link">
           <SecondaryButton buttonName="Sign Up" />
         </a>
       </div>
