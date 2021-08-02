@@ -27,6 +27,16 @@
     }
 }
 
+@keyframes secondaryClickAnimation{
+    50%{
+        transform: translateX(5px);
+    }
+}
+
 .primary-btn:active{
     animation: clickAnimation 100ms linear;
+}
+
+.secondary-btn:active{
+    animation: secondaryClickAnimation 100ms linear;
 }
