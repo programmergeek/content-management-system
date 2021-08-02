@@ -1,6 +1,11 @@
 import React from "react";
 import "./Button.css";
 
-export const PrimaryButton: React.FC = () => {
-  <button></button>;
+interface Props {
+  buttonName: string;
+  type?: "submit";
+}
+
+export const PrimaryButton: React.FC<Props> = ({ buttonName, type }: Props) => {
+  return <button type={type}> {buttonName} </button>;
 };
