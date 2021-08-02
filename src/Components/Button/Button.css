@@ -2,20 +2,31 @@
 
 .btn{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     font-family: "Press Start 2P", cursive;
     border-style: none;
     padding: 16px 12px;
     border-radius: 10px;
 }
 
-.primary-button{
+.primary-btn{
     background-color: #7851A9;
     box-shadow: 0px 5px 0px #3C2954;
     color: white;
 }
 
-.secondary-button{
+.secondary-btn{
     color: #7851A9;
     background-color: white;
+}
+
+@keyframes clickAnimation {
+    50%{
+        transform: translateY(5px);
+        box-shadow: 0 0 0 #3C2954;
+    }
+}
+
+.primary-btn:active{
+    animation: clickAnimation 100ms linear;
 }
