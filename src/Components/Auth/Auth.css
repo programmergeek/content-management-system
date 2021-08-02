@@ -52,7 +52,8 @@ label{
 .error-message{
     font-size: 14px;
     font-family: "Quicksand", sans-serif;
-    color: red;
+    margin: 0;
+    padding-left: 10px;
 }
 
 .auth-page-link{
