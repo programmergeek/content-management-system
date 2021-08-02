@@ -21,9 +21,9 @@ export const Login: React.FC = () => {
 
   return (
     <div className="form-container">
-      <div className="form">
+      <div className="form-sub-container">
         <p className="header">Login</p>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="form">
           <label htmlFor="username">Username</label>
           <input
             {...register("username", { required: true, maxLength: 100 })}
@@ -64,10 +64,10 @@ export const Login: React.FC = () => {
           )}
 
           <PrimaryButton buttonName="Login" type="submit" />
-          <a href="/signup" className="">
-            <SecondaryButton buttonName="Sign Up" />
-          </a>
         </form>
+        <a href="/signup" className="">
+          <SecondaryButton buttonName="Sign Up" />
+        </a>
       </div>
       <div className="colour-gradient"></div>
     </div>

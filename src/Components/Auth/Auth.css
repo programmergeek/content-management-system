@@ -1,0 +1,14 @@
+.form-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form-sub-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
