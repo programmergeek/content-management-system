@@ -5,6 +5,12 @@
     grid-template-columns: 50% 50%;
 }
 
+.colour-gradient{
+    height: 100vh;
+    width: 50vw;
+    background: linear-gradient(153.69deg, #DEA5A4 0%, rgba(222, 165, 164, 0) 100%), #7851A9;;
+}
+
 .form-sub-container{
     display: flex;
     flex-direction: column;
