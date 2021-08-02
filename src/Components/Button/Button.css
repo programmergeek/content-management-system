@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.btn{
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Press Start 2P", cursive;
+    border-style: none;
+    padding: 16px 12px;
+    border-radius: 10px;
+}
+
+.primary-button{
+    background-color: #7851A9;
+    box-shadow: 0px 5px 0px #3C2954;
+    color: white;
+}
+
+.secondary-button{
+    color: #7851A9;
+    background-color: white;
+}
