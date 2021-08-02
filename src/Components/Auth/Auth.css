@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
+
 .form-container{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -6,9 +8,33 @@
 .form-sub-container{
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
 
 .form{
     display: flex;
     flex-direction: column;
+}
+
+.header{
+    font-size: 60px;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+}
+
+label{
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.field{
+    width: 35vw;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
