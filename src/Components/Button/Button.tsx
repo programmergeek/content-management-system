@@ -7,5 +7,14 @@ interface Props {
 }
 
 export const PrimaryButton: React.FC<Props> = ({ buttonName, type }: Props) => {
-  return <button type={type}> {buttonName} </button>;
+  return (
+    <button type={type} className="primary-btn btn">
+      {" "}
+      {buttonName}{" "}
+    </button>
+  );
+};
+
+export const SecondaryButton: React.FC<Props> = ({ buttonName }: Props) => {
+  return <button className="secondary-btn btn"> {`>${buttonName}`} </button>;
 };
