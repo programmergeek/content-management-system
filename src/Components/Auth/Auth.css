@@ -26,6 +26,11 @@
     transform: translate(-10%, -50%);
 }
 
+.action-area{
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     font-size: 60px;
     font-family: "Press Start 2P", cursive;
@@ -58,8 +63,54 @@ label{
 
 .auth-page-link{
     margin-top: 15px;
+    margin-left:auto;
 }
 
 .primary-btn{
     margin-top: 15px;
+}
+
+@media screen and (min-width:750px) and (max-width:1200px) {
+    .form-container{
+        grid-template-columns: 80% auto;
+    }
+
+    .form{
+        left: 30%;
+        transform: translate(-30%,-50%);
+    }
+    
+    .field{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .form-container{
+        display: block;
+    }
+    
+    .colour-gradient{
+        display: none;
+    }
+
+    .form{
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+    }
+
+    .field{
+        width: 65vw;
+    }
+
+    label{
+        padding-left: 5px;
+    }
+
+    .header{
+        font-size: 50px;
+    }
+
+    
 }
