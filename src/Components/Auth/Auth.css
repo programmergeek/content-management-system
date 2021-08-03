@@ -75,6 +75,10 @@ label{
         grid-template-columns: 80% auto;
     }
 
+    .colour-gradient{
+        width: auto;
+    }
+
     .form{
         left: 30%;
         transform: translate(-30%,-50%);
@@ -111,6 +115,17 @@ label{
     .header{
         font-size: 50px;
     }
-
     
+}
+
+@media screen and (max-width:300px) {
+    .field{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-height:300px) {
+    .form{
+        margin: 20px;
+    }
 }
