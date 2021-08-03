@@ -39,10 +39,6 @@
     flex-direction: column;
 }
 
-#first-name{
-    margin-right: 4vw;
-}
-
 .action-area{
     display: flex;
     flex-direction: column;
@@ -52,6 +48,8 @@
     font-size: 60px;
     font-family: "Press Start 2P", cursive;
     text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 label{
@@ -87,6 +85,12 @@ label{
     margin-top: 15px;
 }
 
+@media screen and (min-width:1200px) {
+    #first-name{
+        margin-right: 4vw;
+    }
+}
+
 @media screen and (min-width:750px) and (max-width:1200px) {
     .form-container{
         grid-template-columns: 80% auto;
@@ -100,9 +104,17 @@ label{
         left: 30%;
         transform: translate(-30%,-50%);
     }
+
+    .full-name{
+        flex-direction: column;
+    }
+    
+    .full-name .field{
+        width: 55vw;
+    }
     
     .field{
-        width: 50vw;
+        width: 55vw;
     }
 }
 
@@ -120,9 +132,18 @@ label{
         top: 40%;
         transform: translate(-50%, -40%);
     }
+    
+    .full-name{
+        flex-direction: column;
+    }
+    
+    .full-name .field{
+        width: 65vw;
+    }
 
     .field{
         width: 65vw;
+        height: 35px;
     }
 
     label{
@@ -131,6 +152,7 @@ label{
 
     .header{
         font-size: 50px;
+        margin-bottom: 0px;
     }
     
 }
