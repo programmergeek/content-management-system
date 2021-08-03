@@ -26,6 +26,23 @@
     transform: translate(-10%, -50%);
 }
 
+.full-name{
+    display: flex;
+}
+
+.full-name .field{
+    width: 15vw;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+#first-name{
+    margin-right: 4vw;
+}
+
 .action-area{
     display: flex;
     flex-direction: column;

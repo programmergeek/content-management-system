@@ -25,39 +25,43 @@ export const SignUp: React.FC = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="action-area">
             <p className="header">Sign Up</p>
             <div className="full-name">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                {...register("firstName", { required: true, maxLength: 100 })}
-                type="text"
-                className="field"
-                id="first-name"
-              />
-              {errors.firstName && errors.firstName.type === "required" && (
-                <p className="error-message"> You forgot this. </p>
-              )}
-              {errors.firstName && errors.firstName.type === "maxLength" && (
-                <p className="error-message">
-                  {" "}
-                  Your name is too powerful for us to handle.{" "}
-                </p>
-              )}
+              <div className="name">
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  {...register("firstName", { required: true, maxLength: 100 })}
+                  type="text"
+                  className="field"
+                  id="first-name"
+                />
+                {errors.firstName && errors.firstName.type === "required" && (
+                  <p className="error-message"> You forgot this. </p>
+                )}
+                {errors.firstName && errors.firstName.type === "maxLength" && (
+                  <p className="error-message">
+                    {" "}
+                    Your name is too powerful for us to handle.{" "}
+                  </p>
+                )}
+              </div>
 
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                {...register("lastName", { required: true, maxLength: 100 })}
-                type="text"
-                className="field"
-                id="last-name"
-              />
-              {errors.lastName && errors.lastName.type === "required" && (
-                <p className="error-message"> You forgot this. </p>
-              )}
-              {errors.lastName && errors.lastName.type === "maxLength" && (
-                <p className="error-message">
-                  {" "}
-                  Your name is too powerful for us to handle.{" "}
-                </p>
-              )}
+              <div className="name">
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  {...register("lastName", { required: true, maxLength: 100 })}
+                  type="text"
+                  className="field"
+                  id="last-name"
+                />
+                {errors.lastName && errors.lastName.type === "required" && (
+                  <p className="error-message"> You forgot this. </p>
+                )}
+                {errors.lastName && errors.lastName.type === "maxLength" && (
+                  <p className="error-message">
+                    {" "}
+                    Your name is too powerful for us to handle.{" "}
+                  </p>
+                )}
+              </div>
             </div>
             <label htmlFor="email">Email</label>
             <input
