@@ -35,3 +35,30 @@ export const userSignOut = createAction("user/signOut", function prepare() {
     },
   };
 });
+
+export const editPostTitle = createAction(
+  "post/editTitle",
+  function prepare(title: string) {
+    return {
+      payload: title,
+    };
+  }
+);
+
+export const editPostContent = createAction(
+  "post/editContent",
+  function prepare(content: string) {
+    return {
+      payload: content,
+    };
+  }
+);
+
+export const editVisibility = createAction(
+  "post/editVisibility",
+  function prepare(isVisible: boolean) {
+    return {
+      payload: isVisible,
+    };
+  }
+);
