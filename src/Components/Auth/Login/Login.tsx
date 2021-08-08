@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { PrimaryButton, SecondaryButton } from "./../../";
+import { userLogin } from "../../../Redux/Actions";
+import { PrimaryButton, SecondaryButton, useAppDispatch } from "./../../";
 import "./../Auth.css";
 
 interface FormFields {
@@ -14,7 +15,17 @@ export const Login: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormFields>();
-  const onSubmit: SubmitHandler<FormFields> = (data) => console.log(data);
+  const dispatch = useAppDispatch();
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    dispatch(
+      userLogin({
+        isLoggedIn: true,
+        username: data.username,
+        posts: [],
+      })
+    );
+    console.log(data);
+  };
 
   return (
     <div className="form-container">
