@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createReducer } from "@reduxjs/toolkit";
 import { userLogin, userSignOut } from "./Actions";
 
