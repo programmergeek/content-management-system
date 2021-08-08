@@ -1,23 +1,22 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
-interface Dataset {
-  label: string;
-  backgroundColor: string;
-  borderColor: string;
-  data: number;
-}
+type Data = {
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    backgroundColor: string[];
+    borderColor: string[];
+    borderWidth: number;
+  }[];
+};
 
-interface Data {
-  labels: string;
-  datasets: Dataset[];
-}
-
-export const DoughnutChart: React.FC<Data> = ({ ...props }: Data) => {
+export const DoughnutChart: React.FC<Data> = (data: Data) => {
   return (
     <div className="doughnut-chart chart">
       <div className="chart-title"> Views per Post </div>
-      <Doughnut data={props.datasets} />
+      <Doughnut data={data} />
     </div>
   );
 };
