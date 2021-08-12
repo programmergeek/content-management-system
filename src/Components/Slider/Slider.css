@@ -2,7 +2,8 @@
     width: 50px;
     height: 20px;
     border-radius: 15px;
-    background-image: linear-gradient(90deg, #dea5a4 100%, #68E895 0%);
+    background-color: #dea5a4;
+    transition: background-color 300ms linear;
 }
 
 .track-ball{
@@ -41,4 +42,9 @@
 
 .moveLeft{
     animation: moveTrackBallLeft 300ms linear forwards;
+}
+
+.changeGreen{
+    background-color: #68E895;
+    transition: background-color 300ms linear;
 }
