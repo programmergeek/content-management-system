@@ -7,14 +7,13 @@ type Props = {
 };
 
 export const Slider: React.FC<Props> = ({ isOn, setIsOn }: Props) => {
-  const styles = {
-    backgroundColor: isOn ? "#68E895" : "#dea5a4",
-  };
-
   return (
     <div className="slider-container">
-      <div className="track" style={styles} onClick={() => setIsOn(!isOn)}>
-        <div className="track-ball"></div>
+      <div
+        className={`track ${isOn ? "changeGreen" : "changeRed"}`}
+        onClick={() => setIsOn(!isOn)}
+      >
+        <div className={`track-ball ${isOn ? "moveRight" : "moveLeft"}`}></div>
       </div>
     </div>
   );

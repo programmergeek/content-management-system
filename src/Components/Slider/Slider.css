@@ -2,6 +2,7 @@
     width: 50px;
     height: 20px;
     border-radius: 15px;
+    background-image: linear-gradient(90deg, #dea5a4 100%, #68E895 0%);
 }
 
 .track-ball{
@@ -12,4 +13,32 @@
     height: 15px;
     border-radius: 15px;
     background-color: white;
+}
+
+@keyframes moveTrackBallRight {
+    from{
+
+    }
+
+    to{
+        left: 32px
+    }
+}
+
+@keyframes moveTrackBallLeft {
+    from{
+        left: 30px;
+    }
+
+    to{
+        left: 3px
+    }
+}
+
+.moveRight{
+    animation: moveTrackBallRight 300ms linear forwards;
+}
+
+.moveLeft{
+    animation: moveTrackBallLeft 300ms linear forwards;
 }
