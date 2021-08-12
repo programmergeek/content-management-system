@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
+
+.table-header{
+    font-family: 'Press Start 2P', cursive;
+    display: grid;
+    grid-template-columns: 6vw 25vw 16vw 15vw 15vw 16vw;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: fit-content;
+}
+
+.header-name{
+    text-align: center;
+    border-right: 2px solid #dadada;
+}

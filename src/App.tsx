@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { Slider } from "./Components";
+import { Table } from "./Components";
+
+const data = {
+  records: [
+    {
+      postID: 0,
+      postTitle: "Test Title 1",
+      publishDate: "12/12/2015",
+      lastUpdate: "05/02/2016",
+      views: 125,
+      isVisible: true,
+    },
+    {
+      postID: 1,
+      postTitle: "Test Title 2",
+      publishDate: "01/10/2016",
+      lastUpdate: "03/13/2016",
+      views: 15,
+      isVisible: true,
+    },
+  ],
+};
 
 const App: React.FC = () => {
-  const [isOn, setIsOn] = useState<boolean>(true);
-
   return (
     <div className="App">
-      <Slider isOn={isOn} setIsOn={setIsOn} />
+      <Table records={data.records} />
     </div>
   );
 };
