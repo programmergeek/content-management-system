@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Slider.css";
 
 type Props = {
   isOn: boolean;
-  setIsOn: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Slider: React.FC<Props> = ({ isOn, setIsOn }: Props) => {
+export const Slider: React.FC<Props> = ({ isOn }: Props) => {
+  const [state, setState] = useState(isOn);
   return (
     <div className="slider-container">
       <div
-        className={`track ${isOn ? "changeGreen" : ""}`}
-        onClick={() => setIsOn(!isOn)}
+        className={`track ${state ? "changeGreen" : ""}`}
+        onClick={() => setState(!state)}
       >
-        <div className={`track-ball ${isOn ? "moveRight" : "moveLeft"}`}></div>
+        <div className={`track-ball ${state ? "moveRight" : "moveLeft"}`}></div>
       </div>
     </div>
   );
