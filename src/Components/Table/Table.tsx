@@ -1,4 +1,5 @@
 import React from "react";
+import { Slider } from "..";
 import "./Table.css";
 
 type Records = {
@@ -31,7 +32,11 @@ export const Table: React.FC<Records> = ({ ...props }: Records) => {
               <p className="pub-date"> {record.publishDate} </p>
               <p className="last-update"> {record.lastUpdate} </p>
               <p className="views"> {record.views} </p>
-              <p className="visible"> {record.isVisible.valueOf} </p>
+              <p className="visible">
+                <div className="slider">
+                  <Slider isOn={record.isVisible} />
+                </div>
+              </p>
               {console.log(props.records)}
             </div>
           );

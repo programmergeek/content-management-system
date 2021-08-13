@@ -13,3 +13,26 @@
     text-align: center;
     border-right: 2px solid #dadada;
 }
+
+.records{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.record{
+    display: grid;
+    grid-template-columns: 6vw 25vw 16vw 15vw 15vw 16vw;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 93vw;
+}
+
+.slider{
+    position: relative;
+    left: 40%;
+}
