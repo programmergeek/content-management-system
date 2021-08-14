@@ -41,9 +41,11 @@
 }
 
 .slider{
-    position: relative;
-    left: 80%;
-    top: 50%;
-    transform: translate(-50%, -50%);    
     width: fit-content;
+}
+
+.visible{
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
