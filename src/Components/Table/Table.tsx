@@ -32,12 +32,11 @@ export const Table: React.FC<Records> = ({ ...props }: Records) => {
               <p className="pub-date"> {record.publishDate} </p>
               <p className="last-update"> {record.lastUpdate} </p>
               <p className="views"> {record.views} </p>
-              <p className="visible">
+              <div className="visible">
                 <div className="slider">
                   <Slider isOn={record.isVisible} />
                 </div>
-              </p>
-              {console.log(props.records)}
+              </div>
             </div>
           );
         })}
