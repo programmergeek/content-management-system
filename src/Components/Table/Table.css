@@ -49,3 +49,23 @@
     justify-content: center;
     align-content: center;
 }
+
+@media screen and (max-width: 450px) {
+    .last-update, .views, #last-update, #views, .pub-date, #pub-date{
+        display: none;
+    }
+
+    .table-header{
+        grid-template-columns:  10vw 60vw 28.9vw;
+    }
+
+    .record{
+        grid-template-columns: 10vw 60vw  28.9vw;
+        width: fit-content;
+    }
+
+    .header-name{
+        font-size: 13px;
+    }
+
+}

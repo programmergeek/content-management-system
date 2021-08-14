@@ -16,12 +16,24 @@ export const Table: React.FC<Records> = ({ ...props }: Records) => {
   return (
     <div className="table-container">
       <div className="table-header">
-        <p className="header-name">ID</p>
-        <p className="header-name">Title</p>
-        <p className="header-name">Publish Date</p>
-        <p className="header-name">Last Update</p>
-        <p className="header-name">Views</p>
-        <p className="header-name">Visible</p>
+        <p className="header-name" id="ID">
+          ID
+        </p>
+        <p className="header-name" id="title">
+          Title
+        </p>
+        <p className="header-name" id="pub-date">
+          Publish Date
+        </p>
+        <p className="header-name" id="last-update">
+          Last Update
+        </p>
+        <p className="header-name" id="views">
+          Views
+        </p>
+        <p className="header-name" id="visible">
+          Visible
+        </p>
       </div>
       <div id="records">
         {props.records.map((record) => {
