@@ -50,6 +50,21 @@
     align-content: center;
 }
 
+@media screen and (min-width: 450px) and (max-width: 700px) {
+    .last-update, #last-update, .views, #views{
+        display: none;
+    }
+
+    .table-header{
+        grid-template-columns: 10vw 35vw 29vw 24.9vw;
+    }
+    
+    .record{
+        grid-template-columns: 10vw 35vw 29vw 24.9vw;
+        width: fit-content;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .last-update, .views, #last-update, #views, .pub-date, #pub-date{
         display: none;
